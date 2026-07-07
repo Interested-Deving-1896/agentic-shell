@@ -1,124 +1,75 @@
+[update-readmes]   Mode: rewrite — migrating to template structure...
 # agentic-shell
 
-Agentic Shell (AGIsh) is an experimental shell where commands are interpreted and run by a large language model (LLM).
-AGIsh can be used to test and evaluate LLMs on a variety of tasks as well as used as your natural language shell.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/agentic-shell)
 
-<p align="center">
-  <img width="600" src="https://raw.githubusercontent.com/Flux159/agentic-shell/refs/heads/main/agish.svg">
-</p>
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-## Features
+## Architecture
 
-- [x] Command completion & directory autocomplete
-- [x] History (persistent across sessions)
-- [x] Use your own API keys
-- [x] Agentic loop to fix commands
-- [x] Pipe commands into shell to run
-- [x] Mac OS & Linux shell support
-- [ ] Run against multiple LLM providers (in progress)
-- [ ] Windows & Powershell support (in progress)
-- [ ] Support for plugins to extend agish functionality
-- [ ] Run with local LLM models
-- [ ] Support for .agishrc file to set default LLM provider, API keys, etc.
-- [ ] MCP Server support
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-## Will not support
+## Install
 
-- [ ] Interactive commands (vim, nano, top, read, etc.) - these are not supported because they require stdin input and are not supported by the current version of agish. Adding proper support for these will require recreating an entire terminal emulator (or using node-pty with custom shell interceptors for every shell) in agish which is not a goal of this project.
-
-## Installation
-
-Download from [releases](https://github.com/Flux159/agentic-shell/releases), `chmod +x` and move to a directory in your PATH or follow one of the guides below.
-
-## Mac OS X (Apple Silicon/ARM64)
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
 ```bash
-curl -L https://github.com/Flux159/agentic-shell/releases/download/v1/agish-macos-arm64 -o agish
-chmod +x agish
-sudo mv agish /usr/local/bin/ # Or move to any other directory in your PATH
-```
-
-## Mac OS X (Intel/x64)
-
-```bash
-curl -L https://github.com/Flux159/agentic-shell/releases/download/v1/agish-macos-x64 -o agish
-chmod +x agish
-sudo mv agish /usr/local/bin/ # Or move to any other directory in your PATH
-```
-
-## Linux (x64)
-
-```bash
-curl -L https://github.com/Flux159/agentic-shell/releases/download/v1/agish-linux-x64 -o agish
-chmod +x agish
-sudo mv agish /usr/local/bin/ # Or move to any other directory in your PATH
-```
-
-# Usage
-
-In your shell, make sure you have the following environment variable is set.
-
-Get an Anthropic API Key from https://console.anthropic.com/settings/keys (see this guide for more: https://docs.anthropic.com/en/api/getting-started).
-
-```bash
-export ANTHROPIC_API_KEY="abcd"
-```
-
-### Environment Variables
-
-- `ANTHROPIC_API_KEY` - Required. Your Anthropic API key
-- `DEBUG` - Optional. Set to any value to enable debug logging
-
-```bash
-$ agish
-> list files in the current directory
-```
-
-Special commands:
-
-- `/help` - Show help text
-- `/history` - Show command history
-- `/exit` or `/quit` - Exit the shell
-- Up / Down arrows to navigate command history (will load history from previous sessions as well)
-
-Piping commands to agish:
-
-```bash
-echo "list files in the current directory" | agish
-```
-
-Piping with heredoc:
-
-```bash
-cat << EOF | agish
-list files in the current directory
-zip the files in this directory into dist.zip
-EOF
-```
-
-Build up a directory of test suites for LLMs in a directory & run all of them against agish:
-
-```bash
-find tests/ -type f -exec agish < {} \;
-```
-
-# Development
-
-```
-git clone https://github.com/Flux159/agentic-shell.git
+git clone https://github.com/Interested-Deving-1896/agentic-shell.git
 cd agentic-shell
-npm install
-cp .env.local.example .env.local
-# Update .env.local with your API keys
-npm run dev
 ```
 
-# Building
+## Usage
+
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
+
+## Configuration
+
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/agentic-shell`](https://github.com/Interested-Deving-1896/agentic-shell) and mirrored through:
 
 ```
-npm run build
+Interested-Deving-1896/agentic-shell  ──►  OpenOS-Project-OSP/agentic-shell  ──►  OpenOS-Project-Ecosystem-OOC/agentic-shell
 ```
 
-### License
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-[MIT License](https://github.com/Flux159/agentic-shell/blob/main/LICENSE)
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+[MIT](https://github.com/Interested-Deving-1896/agentic-shell/blob/main/LICENSE) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
